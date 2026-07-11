@@ -14,54 +14,58 @@ A full-stack cab booking web application built with the MERN stack (MongoDB, Exp
 
 ## Project Structure (MVC Architecture)
 
+### Client
 ```
-UCab/
-│
-├── client/
-│   ├── public/
-│   ├── src/
-│   │   ├── components/
-│   │   │   ├── AdminNavbar.jsx
-│   │   │   └── UserNavbar.jsx
-│   │   ├── pages/
-│   │   │   ├── admin/
-│   │   │   │   ├── AdminDashboard.jsx
-│   │   │   │   ├── AdminUsers.jsx
-│   │   │   │   ├── AdminCabs.jsx
-│   │   │   │   └── AdminAddCab.jsx
-│   │   │   ├── Landing.jsx
-│   │   │   ├── Login.jsx
-│   │   │   ├── Register.jsx
-│   │   │   ├── Dashboard.jsx
-│   │   │   ├── BookCab.jsx
-│   │   │   └── MyBookings.jsx
-│   │   ├── services/
-│   │   │   └── api.js
-│   │   ├── App.jsx
-│   │   └── main.jsx
-│   └── package.json
-│
-└── server/
-    ├── config/
-    │   └── db.js
-    ├── controllers/
-    │   ├── authController.js
-    │   ├── cabController.js
-    │   ├── bookingController.js
-    │   └── adminController.js
-    ├── middleware/
-    │   └── authMiddleware.js
-    ├── models/
-    │   ├── User.js
-    │   ├── Cab.js
-    │   └── Booking.js
-    ├── routes/
-    │   ├── authRoutes.js
-    │   ├── cabRoutes.js
-    │   ├── bookingRoutes.js
-    │   └── adminRoutes.js
-    ├── server.js
-    └── package.json
+client/
+├── public/
+├── src/
+│   ├── components/
+│   │   ├── AdminNavbar.jsx
+│   │   └── UserNavbar.jsx
+│   ├── pages/
+│   │   ├── admin/
+│   │   │   ├── AdminDashboard.jsx
+│   │   │   ├── AdminUsers.jsx
+│   │   │   ├── AdminCabs.jsx
+│   │   │   └── AdminAddCab.jsx
+│   │   ├── Landing.jsx
+│   │   ├── Login.jsx
+│   │   ├── Register.jsx
+│   │   ├── Dashboard.jsx
+│   │   ├── BookCab.jsx
+│   │   └── MyBookings.jsx
+│   ├── services/
+│   │   └── api.js
+│   ├── App.jsx
+│   └── main.jsx
+├── package.json
+└── package-lock.json
+```
+
+### Server
+```
+server/
+├── config/
+│   └── db.js
+├── controllers/
+│   ├── authController.js
+│   ├── cabController.js
+│   ├── bookingController.js
+│   └── adminController.js
+├── middleware/
+│   └── authMiddleware.js
+├── models/
+│   ├── User.js
+│   ├── Cab.js
+│   └── Booking.js
+├── routes/
+│   ├── authRoutes.js
+│   ├── cabRoutes.js
+│   ├── bookingRoutes.js
+│   └── adminRoutes.js
+├── server.js
+├── package.json
+└── package-lock.json
 ```
 
 ---
