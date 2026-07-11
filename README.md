@@ -17,7 +17,7 @@ A full-stack cab booking web application built with the MERN stack (MongoDB, Exp
 ```
 UCab/
 │
-├── client/                         # Frontend - React + Vite
+├── client/
 │   ├── public/
 │   ├── src/
 │   │   ├── components/
@@ -41,26 +41,26 @@ UCab/
 │   │   └── main.jsx
 │   └── package.json
 │
-└── server/                         # Backend - Node.js + Express (MVC)
+└── server/
     ├── config/
-    │   └── db.js                   # MongoDB connection
+    │   └── db.js
     ├── controllers/
-    │   ├── authController.js       # Register & Login logic
-    │   ├── cabController.js        # Cab CRUD logic
-    │   ├── bookingController.js    # Booking logic
-    │   └── adminController.js      # Admin stats & user management
+    │   ├── authController.js
+    │   ├── cabController.js
+    │   ├── bookingController.js
+    │   └── adminController.js
     ├── middleware/
-    │   └── authMiddleware.js       # JWT authentication middleware
+    │   └── authMiddleware.js
     ├── models/
-    │   ├── User.js                 # User schema
-    │   ├── Cab.js                  # Cab schema
-    │   └── Booking.js              # Booking schema
+    │   ├── User.js
+    │   ├── Cab.js
+    │   └── Booking.js
     ├── routes/
-    │   ├── authRoutes.js           # /api/auth
-    │   ├── cabRoutes.js            # /api/cabs
-    │   ├── bookingRoutes.js        # /api/bookings
-    │   └── adminRoutes.js          # /api/admin
-    ├── server.js                   # Application entry point
+    │   ├── authRoutes.js
+    │   ├── cabRoutes.js
+    │   ├── bookingRoutes.js
+    │   └── adminRoutes.js
+    ├── server.js
     └── package.json
 ```
 
