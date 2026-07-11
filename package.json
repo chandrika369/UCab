@@ -1,0 +1,14 @@
+{
+  "name": "ucab",
+  "version": "1.0.0",
+  "description": "UCab - Cab Booking Application",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "server": "cd server && npm run dev",
+    "client": "cd client && npm run dev"
+  },
+  "keywords": ["cab", "booking", "mern"],
+  "author": "Chandrika",
+  "license": "ISC"
+}
