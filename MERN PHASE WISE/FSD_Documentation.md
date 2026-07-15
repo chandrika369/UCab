@@ -361,3 +361,4 @@ Authentication is implemented using **JWT (JSON Web Tokens)**.
 - Automatic cab availability update when booking status changes
 - Email confirmation on successful booking
 - OTP-based login for added security
+
