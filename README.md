@@ -6,6 +6,18 @@ A full-stack cab booking web application built with the MERN stack (MongoDB, Exp
 
 ## Project Structure (MVC Architecture)
 
+```
+UCab/
+├── client/
+├── server/
+├── MERN PHASE WISE/
+├── Demo Video.md
+├── README.md
+├── .gitignore
+├── package.json
+└── package-lock.json
+```
+
 ### Client
 ```
 client/
