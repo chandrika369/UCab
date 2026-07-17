@@ -21,12 +21,12 @@ The purpose of UCab is to eliminate the inefficiencies in traditional cab bookin
 
 People who need cab services face difficulty in finding available cabs quickly, comparing fares transparently, and managing bookings efficiently. Cab administrators have no digital tool to manage their fleet. There is no centralized platform that addresses all these needs together.
 
-**POV Statement:**
+POV Statement:
 A daily commuter needs a simple and transparent cab booking platform because manually finding and negotiating with cab drivers is time-consuming, unreliable, and lacks price transparency.
 
 ### 2.2 Empathy Map Canvas
 
-**User Persona: Working Professional / College Student**
+User Persona: Working Professional / College Student
 
 | Quadrant | Details |
 |----------|---------|
@@ -60,7 +60,7 @@ Ideas generated and prioritized for UCab v1.0:
 
 ### 3.1 Customer Journey Map
 
-**User Journey:**
+User Journey:
 ```
 Visits Landing Page
 → Registers / Logs in
@@ -72,7 +72,7 @@ Visits Landing Page
 → Cancels if needed
 ```
 
-**Admin Journey:**
+Admin Journey:
 ```
 Logs in as Admin
 → Views dashboard stats
@@ -83,7 +83,7 @@ Logs in as Admin
 
 ### 3.2 Solution Requirement
 
-**Functional Requirements:**
+Functional Requirements:
 
 | ID    | Requirement |
 |-------|-------------|
@@ -99,7 +99,7 @@ Logs in as Admin
 | FR-10 | Admin can add, view and manage cabs |
 | FR-11 | Admin can view all registered users |
 
-**Non-Functional Requirements:**
+Non-Functional Requirements:
 
 | ID     | Requirement |
 |--------|-------------|
@@ -111,7 +111,7 @@ Logs in as Admin
 
 ### 3.3 Data Flow Diagram
 
-**Level 0 (Context Diagram):**
+Level 0:
 ```
 User ──► UCab Application ◄── Admin
               │
@@ -119,7 +119,7 @@ User ──► UCab Application ◄── Admin
         MongoDB Database
 ```
 
-**Level 1:**
+Level 1:
 ```
 User ──► Register/Login ──► User Collection
 User ──► Browse Cabs ──► Cab Collection
@@ -160,11 +160,11 @@ Admin ──► View Users ──► User Collection
 
 UCab is a MERN stack web application with:
 
-- **Landing Page** – Hero section introducing the platform
-- **Auth System** – Register/Login with role selection (User/Admin)
-- **User Side** – Browse cabs, fare estimate, book, view, cancel
-- **Admin Side** – Dashboard stats, manage cabs, view users
-- **Security** – JWT tokens, bcrypt password hashing, protected routes
+- Landing Page – Hero section introducing the platform
+- Auth System – Register/Login with role selection (User/Admin)
+- User Side – Browse cabs, fare estimate, book, view, cancel
+- Admin Side – Dashboard stats, manage cabs, view users
+- Security – JWT tokens, bcrypt password hashing, protected routes
 
 ### 4.3 Solution Architecture
 
@@ -201,11 +201,11 @@ MongoDB Atlas (Database)
 | Week 3 | Frontend Development (Pages, Components) | Week 3 |
 | Week 4 | Testing, Documentation, GitHub Push | Week 4 |
 
-**Milestones:**
-- Backend API fully working with Postman tested
+Milestones:
+- Backend API fully working and Postman tested
 - Frontend connected to backend
 - Role-based login working
-- All 27 test cases passed
+- All test cases passed
 - GitHub repo with MVC structure ready
 - Documentation completed
 
@@ -226,7 +226,7 @@ MongoDB Atlas (Database)
 | TC-07 | Sort cabs by price | Pass |
 | TC-08 | Live fare estimate on distance input | Pass |
 | TC-09 | Book cab with valid details | Pass |
-| TC-10 | Book cab without filling required fields | Pass |
+| TC-10 | Book cab without required fields | Pass |
 | TC-11 | View My Bookings | Pass |
 | TC-12 | Cancel active booking | Pass |
 | TC-13 | Admin dashboard stats | Pass |
@@ -235,7 +235,7 @@ MongoDB Atlas (Database)
 | TC-16 | Access protected route without token – 401 | Pass |
 | TC-17 | Cancel another user's booking – 403 | Pass |
 
-**All 17 test cases passed successfully.**
+All 17 test cases passed successfully.
 
 ---
 
@@ -262,8 +262,7 @@ Demo Video: https://drive.google.com/file/d/1vDyR4jfC77aZJKfgsEeQ6LGq0B-k-8GT/vi
 
 ## 8. ADVANTAGES & DISADVANTAGES
 
-**Advantages:**
-
+Advantages:
 - Centralized platform for all cab booking needs
 - Transparent fare calculation before booking
 - Role-based access ensures security
@@ -272,8 +271,7 @@ Demo Video: https://drive.google.com/file/d/1vDyR4jfC77aZJKfgsEeQ6LGq0B-k-8GT/vi
 - JWT authentication is stateless and scalable
 - MongoDB is flexible for evolving data needs
 
-**Disadvantages:**
-
+Disadvantages:
 - No real-time cab tracking
 - No payment gateway integrated
 - Cab availability not auto-updated on booking

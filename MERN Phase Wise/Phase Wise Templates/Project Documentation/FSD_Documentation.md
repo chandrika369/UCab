@@ -180,39 +180,26 @@ Frontend runs at: http://localhost:5173
 
 ### Auth Routes /api/auth
 
-| Method | Endpoint  | Description        | Request Body                             |
-|--------|-----------|--------------------|------------------------------------------|
-| POST   | /register | Register new user  | name, email, phone, password, role       |
-| POST   | /login    | Login user         | email, password                          |
-
-Example Response – Login:
-```
-{
-  "message": "Login Successful",
-  "token": "eyJhbGciOiJIUzI1NiIs...",
-  "user": {
-    "name": "Chandrika",
-    "email": "chandrika@gmail.com",
-    "role": "user"
-  }
-}
-```
+| Method | Endpoint  | Description       | Request Body                       |
+|--------|-----------|-------------------|------------------------------------|
+| POST   | /register | Register new user | name, email, phone, password, role |
+| POST   | /login    | Login user        | email, password                    |
 
 ### Cab Routes /api/cabs
 
-| Method | Endpoint | Description            | Auth |
-|--------|----------|------------------------|------|
-| GET    | /        | Get available cabs     | No   |
-| GET    | /all     | Get all cabs           | Yes  |
-| POST   | /        | Add new cab            | Yes  |
+| Method | Endpoint | Description        | Auth |
+|--------|----------|--------------------|------|
+| GET    | /        | Get available cabs | No   |
+| GET    | /all     | Get all cabs       | Yes  |
+| POST   | /        | Add new cab        | Yes  |
 
 ### Booking Routes /api/bookings
 
-| Method | Endpoint      | Description       | Auth |
-|--------|---------------|-------------------|------|
-| POST   | /             | Book a cab        | Yes  |
-| GET    | /             | Get my bookings   | Yes  |
-| PATCH  | /:id/cancel   | Cancel a booking  | Yes  |
+| Method | Endpoint    | Description      | Auth |
+|--------|-------------|------------------|------|
+| POST   | /           | Book a cab       | Yes  |
+| GET    | /           | Get my bookings  | Yes  |
+| PATCH  | /:id/cancel | Cancel a booking | Yes  |
 
 ### Admin Routes /api/admin
 
@@ -241,18 +228,18 @@ Authentication is implemented using JWT (JSON Web Tokens).
 
 ## 9. User Interface
 
-| Page            | Route               | Access |
-|-----------------|---------------------|--------|
-| Landing Page    | /                   | Public |
-| Login           | /login              | Public |
-| Register        | /register           | Public |
-| User Dashboard  | /dashboard          | User   |
-| Book Cab        | /book               | User   |
-| My Bookings     | /mybookings         | User   |
-| Admin Dashboard | /admin/dashboard    | Admin  |
-| Admin Users     | /admin/users        | Admin  |
-| Admin Cabs      | /admin/cabs         | Admin  |
-| Admin Add Cab   | /admin/addcab       | Admin  |
+| Page            | Route            | Access |
+|-----------------|------------------|--------|
+| Landing Page    | /                | Public |
+| Login           | /login           | Public |
+| Register        | /register        | Public |
+| User Dashboard  | /dashboard       | User   |
+| Book Cab        | /book            | User   |
+| My Bookings     | /mybookings      | User   |
+| Admin Dashboard | /admin/dashboard | Admin  |
+| Admin Users     | /admin/users     | Admin  |
+| Admin Cabs      | /admin/cabs      | Admin  |
+| Admin Add Cab   | /admin/addcab    | Admin  |
 
 ---
 
@@ -288,7 +275,7 @@ https://github.com/chandrika369/UCab
 ## 12. Known Issues
 
 - Cab availability status does not automatically update when a booking is made
-- No route guards on frontend (users can navigate to admin routes manually via URL)
+- No route guards on frontend
 - Image upload for cabs is a placeholder, not connected to backend storage
 
 ---
