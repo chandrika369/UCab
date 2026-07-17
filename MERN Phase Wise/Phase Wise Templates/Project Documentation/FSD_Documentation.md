@@ -160,7 +160,7 @@ server/
 
 ## 6. Running the Application
 
-Start the Backend Server:
+Start the Backend:
 ```
 cd server
 npm start
@@ -178,14 +178,14 @@ Frontend runs at: http://localhost:5173
 
 ## 7. API Documentation
 
-### Auth Routes /api/auth
+### Auth – /api/auth
 
-| Method | Endpoint  | Description       | Request Body                       |
-|--------|-----------|-------------------|------------------------------------|
-| POST   | /register | Register new user | name, email, phone, password, role |
-| POST   | /login    | Login user        | email, password                    |
+| Method | Endpoint  | Description       |
+|--------|-----------|-------------------|
+| POST   | /register | Register new user |
+| POST   | /login    | Login user        |
 
-### Cab Routes /api/cabs
+### Cabs – /api/cabs
 
 | Method | Endpoint | Description        | Auth |
 |--------|----------|--------------------|------|
@@ -193,7 +193,7 @@ Frontend runs at: http://localhost:5173
 | GET    | /all     | Get all cabs       | Yes  |
 | POST   | /        | Add new cab        | Yes  |
 
-### Booking Routes /api/bookings
+### Bookings – /api/bookings
 
 | Method | Endpoint    | Description      | Auth |
 |--------|-------------|------------------|------|
@@ -201,7 +201,7 @@ Frontend runs at: http://localhost:5173
 | GET    | /           | Get my bookings  | Yes  |
 | PATCH  | /:id/cancel | Cancel a booking | Yes  |
 
-### Admin Routes /api/admin
+### Admin – /api/admin
 
 | Method | Endpoint | Description        | Auth |
 |--------|----------|--------------------|------|
@@ -212,15 +212,13 @@ Frontend runs at: http://localhost:5173
 
 ## 8. Authentication
 
-Authentication is implemented using JWT (JSON Web Tokens).
-
 - User registers with name, email, phone, password and role
 - Password is hashed using bcryptjs before storing in MongoDB
-- On login, credentials are verified and a JWT token is generated with 7-day expiry
-- Token is stored in localStorage on the client side
-- For protected routes, token is sent in Authorization header as Bearer token
-- authMiddleware.js verifies the token on every protected request
-- After login, user is redirected based on role:
+- On login, JWT token generated with 7-day expiry
+- Token stored in localStorage on client side
+- Protected routes require Authorization: Bearer token header
+- authMiddleware.js verifies token on every protected request
+- After login, redirected based on role:
   - admin → /admin/dashboard
   - user → /dashboard
 
@@ -244,8 +242,6 @@ Authentication is implemented using JWT (JSON Web Tokens).
 ---
 
 ## 10. Testing
-
-Manual testing was performed for all features:
 
 | Feature            | Result |
 |--------------------|--------|
@@ -274,19 +270,18 @@ https://github.com/chandrika369/UCab
 
 ## 12. Known Issues
 
-- Cab availability status does not automatically update when a booking is made
+- Cab availability status does not auto-update when a booking is made
 - No route guards on frontend
-- Image upload for cabs is a placeholder, not connected to backend storage
+- Image upload for cabs is a placeholder
 
 ---
 
 ## 13. Future Enhancements
 
 - Real-time cab tracking using Socket.io
-- Google Maps API for actual distance calculation
+- Google Maps API for distance calculation
 - Payment gateway integration (Razorpay / Stripe)
 - Push notifications for booking confirmation
 - Driver mobile app
-- Rating and review system for drivers
-- Email confirmation on successful booking
+- Rating and review system
 - OTP-based login
